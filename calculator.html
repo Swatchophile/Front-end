@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Calculator</title>
+		<style>
+			body {
+				background:GhostWhite;
+				margin:40px auto auto auto;
+				width:60%;
+				text-align:center;
+				}
+				
+			#header {
+				width:100%;
+				border:2px solid Silver;
+				margin-bottom:20px;
+				test-align:center;
+				margin:auto;
+				padding:6px auto 6px auto;
+				color:SlateGrey;
+				}
+				
+			form {
+				margin-top:15px;
+				color:SlateGrey;
+				}
+				
+			#value {
+				background:White;
+				border-radius:5px;
+				width:300px;
+				height:45px;
+				font-size:26px;
+				font-weight:bold;
+				text-align:center;
+				margin:25px auto auto auto;
+				border:2px solid SlateGrey;
+				padding:6px 5px 4px 5px;
+				color:SlateGrey;
+				}		
+		</style>
+		
+		<script>
+			
+			var first, second, finVal;
+			function setValues() {
+				first=parseFloat(document.getElementById("first").value);
+				second=parseFloat(document.getElementById("second").value);
+				};
+			function add() {
+				setValues();
+				finVal= first + second;
+				document.getElementById("value").innerHTML=finVal;
+				};
+			function subtract() {
+				setValues();
+				finVal= first - second;
+				document.getElementById("value").innerHTML=finVal;
+				};
+			function multiply() {
+				setValues();
+				finVal= first * second;
+				document.getElementById("value").innerHTML=finVal;
+				};
+			function divide() {
+				setValues();
+				finVal= first / second;
+				document.getElementById("value").innerHTML=finVal;
+				};
+				
+		</script>
+			
+				
+		
+	</head>
+	
+	<body>
+	
+		<div id="header">
+			<h1>Calculator</h1>
+		</div>
+		
+		<form id-"form">
+			<input id="first" type="text"></input><br><br>
+			<input id="second" type="text"></input><br><br>
+			<input type="button" onclick="add()" value="Add"></input>
+			<input type="button" onclick="subtract()" value="Subtract"></input>
+			<input type="button" onclick="multiply()" value="Multiply"></input>
+			<input type="button" onclick="divide()" value="Divide"></input><br>
+			<div id="value"></div><br>
+			
+			<input type="button" onclick="this.form.reset()" value="Reset Entries"/>
+			<input type="button" onclick="location.reload()" value="Reset Result"/>
+			
+			
+		</form>
+		
+		
+		
+	
+		
+	</body>
+</html>
